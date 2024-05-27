@@ -1,0 +1,14 @@
+  _____     _             ____
+ | ____|___| |__   ___   / ___|  ___ _ ____   _____ _ __
+ |  _| / __| '_ \ / _ \  \___ \ / _ \ '__\ \ / / _ \ '__|
+ | |__| (__| | | | (_) |  ___) |  __/ |   \ V /  __/ |
+ |_____\___|_| |_|\___/  |____/ \___|_|    \_/ \___|_|
+=========================================================
+Profile: ${spring.profiles.active}
+Application name: ${spring.application.name}
+Application version: ${git.build.version}
+=========================================================
+Built from branch: ${git.branch}
+Commit id: ${git.commit.id.abbrev}
+Commit time: ${git.commit.time}
+=========================================================

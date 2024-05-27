@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  echo-server:
+    build: .
+    image: romanowalex/echo-server:v1.0
+    container_name: echo-server
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: [ "CMD", "curl", "--silent", "--fail", "http://localhost:8080/manage/health" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
