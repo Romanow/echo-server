@@ -17,6 +17,8 @@ management:
       exposure.include: info,health,loggers,prometheus
   health.diskspace.enabled: false
   endpoint.health.show-details: always
+  metrics.tags:
+    application: ${spring.application.name}
   info.git.mode: simple
   health:
     readinessstate.enabled: true
