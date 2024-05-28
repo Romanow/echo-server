@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: echo-server
+  profiles:
+    active: simple
   config:
     import: optional:git.properties
 

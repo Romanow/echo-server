@@ -16,6 +16,8 @@ idea {
 
 ext {
     springBootVersion = "3.2.4"
+    testContainerVersion = "1.19.7"
+    testContainersRedisVersion = "2.2.2"
 }
 
 dependencyManagement {
@@ -36,6 +38,7 @@ repositories {
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-data-redis"
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-actuator"
 
@@ -45,6 +48,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect"
 
     testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "com.redis:testcontainers-redis:$testContainersRedisVersion"
+    testImplementation "org.testcontainers:junit-jupiter:$testContainerVersion"
+
 }
 
 test {
