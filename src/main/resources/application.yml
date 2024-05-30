@@ -8,7 +8,10 @@ spring:
   config:
     import: optional:git.properties
 
+
 management:
+  tracing:
+    enabled: false
   endpoint:
     health.probes.enabled: true
   endpoints:
