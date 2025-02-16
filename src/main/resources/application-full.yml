@@ -5,13 +5,3 @@ spring:
       port: ${REDIS_PORT:6379}
       password: ${REDIS_PASSWORD:test}
       client-type: lettuce
-
-management:
-  otlp.tracing.endpoint: http://jaeger:4318/v1/traces
-  tracing:
-    enabled: true
-    sampling.probability: 1.0
-
-logging:
-  pattern:
-    correlation: "[${spring.application.name},%X{traceId:-},%X{spanId:-}]"
