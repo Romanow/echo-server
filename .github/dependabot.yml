@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: "weekly"
     ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
+      - dependency-name: "kotlin"
+        versions: [ "2.x" ]
     commit-message:
       prefix: "[deps]"

@@ -16,7 +16,7 @@ services:
 
   echo-server:
     build: .
-    image: "romanowalex/echo-server:v2.0"
+    image: ${REPOSITORY_NAME}/echo-server:v2.0
     container_name: echo-server
     environment:
       SPRING_PROFILES_ACTIVE: simple
