@@ -44,7 +44,7 @@ jobs:
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v4
         with:
-          repository: romanowalex/camunda-base
+          repository: romanowalex/echo-server
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
           short-description: ${{ github.event.repository.description }}
