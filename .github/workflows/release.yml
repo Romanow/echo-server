@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: "corretto"
-          java-version: "17"
+          java-version: "21"
           cache: "gradle"
 
       - name: Build project
@@ -33,13 +33,11 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: Build and push
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          tags: romanowalex/echo-server:${{ github.ref_name }}
-          push: true
+      - name: Build Images
+        timeout-minutes: 10
+        run: docker buildx bake --push --set *.platform=linux/amd64,linux/arm64
+        env:
+          VERSION: ${{ github.ref_name }}
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v4
@@ -52,3 +50,5 @@ jobs:
 
       - name: Create release
         uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true

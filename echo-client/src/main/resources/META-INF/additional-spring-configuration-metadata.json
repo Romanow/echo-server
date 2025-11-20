@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "services.echo-server-url",
+      "type": "java.lang.String",
+      "description": "Echo Server url."
+    }
+  ]
+}

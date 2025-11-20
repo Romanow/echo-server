@@ -1,0 +1,2 @@
+services:
+  echo-server-url: http://echo-server:8080

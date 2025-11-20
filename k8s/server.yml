@@ -1,0 +1,16 @@
+---
+image:
+  repository: romanowalex/echo-server
+  tag: v3.0
+
+profile: k8s
+ports:
+  internal: 8080
+
+resources:
+  requests:
+    cpu: 0.5
+    memory: 1024Mi
+  limits:
+    cpu: 1
+    memory: 1024Mi

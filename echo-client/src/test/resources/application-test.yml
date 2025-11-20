@@ -1,0 +1,5 @@
+services:
+  echo-server-url: http://localhost:${wiremock.server.port}
+
+logging.level:
+  WireMock.wiremock: OFF

@@ -1,0 +1,20 @@
+---
+image:
+  repository: romanowalex/echo-client
+  tag: v3.0
+
+profile: k8s
+ports:
+  internal: 8180
+
+ingress:
+  enabled: true
+  domain: local
+
+resources:
+  requests:
+    cpu: 0.5
+    memory: 1024Mi
+  limits:
+    cpu: 1
+    memory: 1024Mi
