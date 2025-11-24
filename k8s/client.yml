@@ -7,6 +7,8 @@ profile: k8s
 ports:
   internal: 8180
 
+serviceAccountName: spring
+
 ingress:
   enabled: true
   domain: local

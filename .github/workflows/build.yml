@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/**"
       - "src/**"
+      - "k8s/**"
       - "Dockerfile"
       - "build.gradle"
       - "gradle.properties"
