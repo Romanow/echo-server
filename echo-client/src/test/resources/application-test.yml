@@ -1,3 +1,8 @@
+spring:
+  cloud:
+    loadbalancer:
+      enabled: false
+
 services:
   echo-server-url: http://localhost:${wiremock.server.port}
 

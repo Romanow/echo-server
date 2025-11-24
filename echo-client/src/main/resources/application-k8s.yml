@@ -1,2 +1,8 @@
+spring:
+  cloud:
+    kubernetes:
+      loadbalancer:
+        mode: service
+
 services:
-  echo-server-url: http://echo-server:8080
+  echo-server-url: ${ECHO_SERVER_URL:http://echo-server:8080}
