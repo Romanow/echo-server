@@ -1,6 +1,7 @@
 spring:
-  main:
-    cloud-platform: none
+  cloud:
+    loadbalancer:
+      enabled: true
 
 services:
   echo-server-url: ${ECHO_SERVER_URL:http://echo-server:8080}

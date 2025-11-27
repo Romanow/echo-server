@@ -7,6 +7,9 @@ spring:
     active: local
   config:
     import: optional:git.properties
+  cloud:
+    loadbalancer:
+      enabled: false
 
 management:
   endpoint:
