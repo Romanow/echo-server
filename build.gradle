@@ -11,7 +11,7 @@ plugins {
 ext {
     springBootVersion = "3.5.9"
     springCloudVersion = "3.3.0"
-    wireMockVersion = "3.10.0"
+    wireMockVersion = "3.10.6"
 }
 
 subprojects { ->
