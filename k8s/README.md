@@ -12,3 +12,5 @@ $ helm install echo-client romanow/java-service --values=client.yml
 
 $ helm scale --replicas=3 deployment/echo-server
 ```
+
+[Установка Istio](istio/README.md)
